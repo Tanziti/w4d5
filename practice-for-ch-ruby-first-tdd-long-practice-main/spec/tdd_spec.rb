@@ -23,10 +23,15 @@ describe Array do
             expect([2, -1, 0, -2, 1].two_sum).to eq([[0, 3], [1, 4]])
         end
 
-
+        #write a spec to check if all indices are pairs (length == 2)
 
     end
 
 
-
+    describe "#my_transpose"  do
+        it "returns a multi-dimensional array" do
+            expect([0, 1, 2],[3, 4, 5],[6, 7, 8])
+        end
+        it 
+    end
 end 

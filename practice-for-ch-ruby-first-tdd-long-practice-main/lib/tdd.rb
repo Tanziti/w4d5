@@ -24,6 +24,15 @@ class Array
 
 
     def my_transpose
+        newarr =[]
+        self.each.with_index do |num, idx|
+            harr = []
+            self.each do |num1|
+                harr << num1[idx] 
+            end
+            newarr << harr
+        end
+        return newarr
     end 
     
 end 
@@ -32,5 +41,12 @@ end
     
     
 [1, 2, 1, 3, 3].uniq # => [1, 2, 3]
-
 [2, -1, 0, -2, 1].two_sum # => [[0, 4], [2, 3]]
+
+
+
+p ([
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8]
+  ]).my_transpose
