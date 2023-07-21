@@ -1,27 +1,6 @@
 require "tdd.rb"
 require "rspec"
 
-# class Array 
-
-# def uniq
-# hash = Hash.new(0)
-#     self.each do |num|
-#         hash[num] += 1 
-#     end 
-
-# return hash.keys 
-
-# end 
-
-# end 
-
-
-# p [1, 2, 1, 3, 3].uniq # => [1, 2, 3]
-
-# #returns an array 
-# #no number within the array is duplicated 
-
-
 describe Array do 
     describe "#uniq" do 
         it "returns an array" do
@@ -30,5 +9,24 @@ describe Array do
         it "returns no duplicates" do
             expect([1,1,2,2,3,3].uniq).to eq([1,2,3])
         end
-    end 
+    end
+    
+
+    describe "#two_sum" do 
+        it "returns an array" do
+            expect([].two_sum).to be_an(Array)
+        end      
+        it "correctly finds all index pairs where the elements at those indexes sum to 0" do
+            expect([-1, 0, 2, -2, 1].two_sum).to eq([[0, 4], [2, 3]])
+        end
+        it "should correctly sort the array with smallest values first" do
+            expect([2, -1, 0, -2, 1].two_sum).to eq([[0, 3], [1, 4]])
+        end
+
+
+
+    end
+
+
+
 end 
