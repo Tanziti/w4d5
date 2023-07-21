@@ -23,12 +23,12 @@ require "rspec"
 
 
 describe Array do 
-    subject(:array)
-
-
     describe "#uniq" do 
         it "returns an array" do
-            expect ([].uniq).to eq([]) 
-        end     
+            expect([].uniq).to be_an(Array)
+        end      
+        it "returns no duplicates" do
+            expect([1,1,2,2,3,3].uniq).to eq([1,2,3])
+        end
     end 
 end 

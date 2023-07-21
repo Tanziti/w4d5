@@ -14,6 +14,7 @@ class Array
     
     
     p [1, 2, 1, 3, 3].uniq # => [1, 2, 3]
+    p [1,1,2,2,3,3].uniq
     
     #returns an array 
     #no number within the array is duplicated 
